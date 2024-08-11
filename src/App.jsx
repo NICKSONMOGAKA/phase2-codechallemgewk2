@@ -1,12 +1,11 @@
 import React from "react";
-import BotsPage from "./BotsPage";
+import BotCollection from "./BotCollection";
 
-function App() {
-  return (
-    <div className="App">
-      <BotsPage />
-    </div>
-  );
-}
+const App = () => {
+  return <div>
+
+    <BotCollection />
+  </div>;
+};
 
 export default App;

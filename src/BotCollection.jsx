@@ -1,26 +1,42 @@
-import React from "react";
-import BotCard from "./BotCard";
+import React, { useState, useEffect } from "react";
+import SingleBot from "./SingleBot";
+import YourBotArmy from "./YourBotArmy";
 
-function BotCollection() {
-  
-  const botItem =  bots.map((bot) => {
-    return (
-      <BotCard
-        key={bot.id}
-        bot={bot}
-        clickEvent={enlistBot}
-        deleteBot={deleteBot}
-      />
-    );
-  })
+const BotCollection = () => {
+  const [bots, setBots] = useState([]);
+  const [yourBotArmy, setYourBotArmy] = useState([]);
+  const [showArmy, setShowArmy] = useState(false);
+
+  useEffect(() => {
+    fetch("https://wk2backend.vercel.app/bots")
+      .then((res) => res.json())
+      .then((data) => setBots(data));
+  }, []);
+
+  const handleAddBot = (bot) => {
+    setYourBotArmy([...yourBotArmy, bot]);
+  };
+
+  const toggleArmy = () => {
+    setShowArmy(!showArmy);
+  };
+
   return (
-    <div className="ui four column grid">
-      <div className="row">
-        {botItem}
-        Collection of all bots
-      </div>
+    <div>
+      <button onClick={toggleArmy}>
+        {showArmy ? "Close Your Bot Army" : "Check Your Bot Army"}
+      </button>
+      {showArmy ? (
+        <YourBotArmy bots={yourBotArmy} />
+      ) : (
+        <div className='card'>
+          {bots.map((bot) => (
+            <SingleBot key={bot.id} bot={bot} addBot={handleAddBot} />
+          ))}
+        </div>
+      )}
     </div>
   );
-}
+};
 
 export default BotCollection;
