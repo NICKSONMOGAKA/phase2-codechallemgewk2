@@ -45,9 +45,10 @@ body {
   margin: 2;
   padding: 2;
   font-family: sans-serif;
-  background-image: url("https://e1.pxfuel.com/desktop-wallpaper/184/85/desktop-wallpaper-transformers-dark-of-the-moon-transformers-dark-of-the-moon-nest-thumbnail.jpg");
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRw78EX7AqQqmfwvcjOyqgFHmyoj-wYCoVsFQ&s");
   background-size: cover; 
   background-repeat: no-repeat;
+  font-color:white;
   }
 
 .text-wrap {
