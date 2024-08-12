@@ -156,6 +156,14 @@ body {
   border: #ffffff;
   padding: auto;
   background-image: url("https://e1.pxfuel.com/desktop-wallpaper/184/85/desktop-wallpaper-transformers-dark-of-the-moon-transformers-dark-of-the-moon-nest-thumbnail.jpg");
+ background-size: cover; 
+  background-repeat: no-repeat;
+  background-position:center ;
+  height: fit-content;
+  
+  font-size: large;
+  color: rgb(255, 254, 254);
+  font-style: italic;
 }
 
 .text-wrap {
