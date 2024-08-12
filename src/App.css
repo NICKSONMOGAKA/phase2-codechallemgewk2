@@ -97,3 +97,72 @@ button:focus-visible {
 .ui.grid {
   padding: 0 20px;
 }
+/* Card Styles */
+.card {
+  padding: 1.5em;
+  background-color: #333; /* Background color for the card */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+  color: #fff; /* Text color */
+  text-align: center; /* Center text inside card */
+  margin: 1em; /* Space between cards */
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition */
+}
+
+.card:hover {
+  transform: scale(1.03); /* Slightly scale up on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+/* Button inside card */
+.card button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  background-color: #1a1a1a;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.25s, border-color 0.25s;
+  margin-bottom: 1em; /* Spacing below the button */
+}
+
+.card button:hover {
+  background-color: #333; /* Slightly lighter on hover */
+  border-color: #646cff;
+}
+
+/* Image Styles */
+.card img {
+  width: 100%;
+  max-width: 200px; /* Set max width for images */
+  height: auto;
+  border-radius: 8px; /* Rounded corners for the image */
+  margin-bottom: 1em; /* Space below the image */
+}
+
+/* Heading Styles */
+.card h2 {
+  font-size: 1.5em;
+  margin: 0.5em 0; /* Spacing around the heading */
+}
+
+/* List Styles */
+.card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.card ul li {
+  margin: 0.5em 0; /* Spacing between list items */
+  font-size: 0.9em; /* Slightly smaller font size */
+}
+
+/* Responsive Image */
+@media (max-width: 600px) {
+  .card img {
+    max-width: 100%; /* Ensure image scales down on small screens */
+  }
+}
