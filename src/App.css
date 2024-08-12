@@ -49,6 +49,14 @@ body {
   
   background-repeat: no-repeat;
   font-color:white;
+   background-size: cover; 
+  background-repeat: no-repeat;
+  background-position:center ;
+  height: fit-content;
+  
+  font-size: large;
+  color: rgb(255, 254, 254);
+  font-style: italic;
   }
 
 .text-wrap {
