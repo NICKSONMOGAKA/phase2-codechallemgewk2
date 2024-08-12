@@ -19,28 +19,13 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 100vh; 
+  min-height: 100vh; /* Changed to ensure it takes full viewport height */
   color: rgb(255, 254, 254);
   font-style: italic;
   display: flex;
   justify-content: center;
-  align-items: center; 
-  text-align: center;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-
-a:hover {
-  color: #535bf2;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  align-items: center; /* Center content vertically */
+  text-align: center; /* Center text for better readability */
 }
 
 button {
@@ -51,12 +36,15 @@ button {
   font-weight: 500;
   font-family: inherit;
   background-color: #1a1a1a;
+  color: #fff; /* Added color to button text */
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: border-color 0.25s, background-color 0.25s;
+  margin-bottom: 1em; /* Added spacing for visual separation */
 }
 
 button:hover {
   border-color: #646cff;
+  background-color: #333; /* Slightly lighter on hover */
 }
 
 button:focus,
@@ -70,18 +58,21 @@ button:focus-visible {
     background-color: #ffffff;
   }
 
-  a:hover {
-    color: #747bff;
-  }
-
   button {
     background-color: #f9f9f9;
+    color: #333;
+  }
+
+  button:hover {
+    border-color: #747bff;
   }
 }
 
 .card {
   padding: 2em;
-  border: 1px solid #ffffff; 
+  background-color: #333; /* Background color for the card */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Added shadow for better depth */
 }
 
 .read-the-docs {
