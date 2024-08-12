@@ -24,7 +24,7 @@ const BotCollection = () => {
   return (
     <div>
       <button onClick={toggleArmy}>
-        {showArmy ? "Close Your Bot Army" : "Check Your Bot Army"}
+        {showArmy ? "Close Your Bot Army" : "Your Bot Army"}
       </button>
       {showArmy ? (
         <YourBotArmy bots={yourBotArmy} />
