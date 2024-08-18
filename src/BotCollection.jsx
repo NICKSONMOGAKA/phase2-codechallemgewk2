@@ -10,16 +10,11 @@ const BotCollection = () => {
   useEffect(() => {
     fetch("https://wk2backend.vercel.app/bots")
       .then((res) => res.json())
-      .then((data) => setBots(data));
+      .then(setBots);
   }, []);
 
-  const handleAddBot = (bot) => {
-    setYourBotArmy([...yourBotArmy, bot]);
-  };
-
-  const toggleArmy = () => {
-    setShowArmy(!showArmy);
-  };
+  const handleAddBot = (bot) => setYourBotArmy((prev) => [...prev, bot]);
+  const toggleArmy = () => setShowArmy((prev) => !prev);
 
   return (
     <div>
@@ -40,3 +35,4 @@ const BotCollection = () => {
 };
 
 export default BotCollection;
+
