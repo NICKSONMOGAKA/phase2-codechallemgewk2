@@ -1,1 +1,23 @@
+:root {
+  /* Font */
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+
+  /* Color */
+  color: rgba(0, 0, 0, 0.87); /* Black with 87% opacity */
+  background-color: #242424; /* Dark Gray */
+
+  /* Text Rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-synthesis: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: inherit; /* Inherit font family from :root */
+}
 
